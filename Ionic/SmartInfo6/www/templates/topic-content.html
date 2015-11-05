@@ -1,0 +1,11 @@
+<ion-view view-title="Thông tin cập nhật">
+  <ion-content  >
+    <ion-list>
+	    <a class="item item-avatar" ng-repeat="content in listTopicContent" href="#/app/listsubject/{{topicId}}/{{content.CONTENT_ID}}">
+	      <img no-image ng-src="http://codeschunks.com/wp-content/uploads/2015/10/angularjs.png">
+	      <h2>{{content.HEARDER}}</h2>
+	      <p>{{content.ABSTRACT}}</p>
+	    </a>
+    </ion-list>
+  </ion-content>
+</ion-view>

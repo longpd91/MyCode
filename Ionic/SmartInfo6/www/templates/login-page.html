@@ -1,0 +1,32 @@
+<ion-header-bar class="bar bar-header bar-stable">
+  <h1 class="title">Đăng nhập</h1>
+</ion-header-bar>
+<ion-view view-title="Đăng nhập">
+  <ion-content>
+  <form name="form"  >
+
+<div class="list ">
+
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input ng-model="login.password" type="password" ng-pattern="/^\d{0,9}(\.\d{1,9})?$/" ng-minlength="4" name="password" placeholder="Mật khẩu" required>
+    </label>
+    <button class="button button-medium button-outline button-positive" ng-click="doLogin(form.$valid, login.password)"> Tiếp tục
+    </button>
+  </div>
+    <div class="row">
+        <label class="padding">
+        <!-- <span class="input-label">Mật khẩu</span> -->
+        <span  ng-show="form.password.$error.required">Bạn chưa nhập mật khẩu! &nbsp</span>
+        <span  ng-show="form.password.$error.minlength">Nhập ít nhất 4 ký tự! &nbsp</span>
+        <span  ng-show="form.password.$error.pattern">Chỉ bao gồm chữ số! &nbsp</span>
+      </label></div>
+</div>
+<!--   {{login.password}}
+   <tt>form.$valid = {{form.$valid}}</tt><br/> -->
+   <p  >UUID của bạn là:  {{showUUID}}</p>
+  </form>
+  </ion-content>
+     
+
+</ion-view>

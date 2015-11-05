@@ -1,0 +1,16 @@
+<ion-view view-title="Danh mục chủ đề">
+  <ion-content>
+    <ion-list can-swipe="listCanSwipe"  >
+		<ion-item ng-repeat="topic in listtopic" class="item-thumbnail-left item-icon-right" 
+		href="#/app/listsubject/{{topic.ID}}">
+			<img no-image ng-src="{{topic.ICON_LINK}}">
+			<h2>{{topic.TOPIC_NAME}}</h2>
+			<!-- <p>{{topic.ID}} -->
+			<!-- </p>{{topic.REGIS}} -->
+			<div bind-html-compile="topic.REGIS_HTML">
+				<!-- <a href="#"><i class="icon ion-android-star-outline"></i></a> -->
+			</div>
+		</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

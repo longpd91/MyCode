@@ -1,0 +1,19 @@
+<ion-view view-title="Nội dung">
+  <ion-content  >
+
+	<div class="card" ng-repeat="content in listContentDetail" >
+		<div class="item item-divider" >
+			{{content.HEARDER}} 
+		</div>
+		<div class="item item-text-wrap ">
+			<p>{{content.DATE_OF_PUBLISH}}</p>
+			<h2>{{content.ABSTRACT}}</h2>
+		</div>
+		<div class="item item-body" ng-bind-html="getHtmlcontent"  >
+		</div>
+		<div class="item item-divider" ng-bind-html="getHtmlOriginLink">
+			<!-- {{content.ORIGIN_LINK}} -->
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
